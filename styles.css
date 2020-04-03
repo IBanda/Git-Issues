@@ -285,6 +285,17 @@
         border: 1px solid rgba(212, 209, 209, 0.8);
     }
     
+    .bottomHeader .action {
+        display: flex;
+        align-items: center;
+        padding-right: 10px;
+        height: 28px;
+    }
+    
+    .bottomHeader .action p {
+        margin: 0;
+    }
+    
     .bottomHeader .notifications>div {
         display: flex;
         align-items: center;
@@ -308,13 +319,20 @@
     
     .bottomHeader .counter {
         border-left: 1px solid rgba(212, 209, 209, 1);
-        padding: 0 10px;
-        margin-left: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 28px;
         background-color: #fff;
+    }
+    
+    .bottomHeader .counter a {
+        padding: 10px;
+        text-decoration: none;
+    }
+    
+    .bottomHeader .counter a:hover {
+        color: #006eed;
     }
     
     .bottomHeader .counter p {
@@ -323,4 +341,61 @@
     
     .bottomHeader .actions .actionBtn svg {
         margin: 0 5px 0 10px;
+    }
+    
+    .overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(65, 61, 61, 0.5);
+        padding-top: 5%;
+        display: none;
+        justify-content: center;
+    }
+    
+    .overlay .modal {
+        background-color: #fff;
+        width: 450px;
+        height: 230px;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+    
+    .overlay .modal .modalHeader {
+        background-color: #f6f8fa;
+        height: 50px;
+        border-bottom: 1px solid #d1d5da;
+        display: flex;
+        align-items: center;
+        text-transform: capitalize;
+        font-weight: 600;
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    
+    .overlay .modal .modalHeader button {
+        cursor: pointer;
+        border: none;
+        background-color: inherit;
+        font-weight: 400;
+        font-size: 18px;
+    }
+    
+    .overlay .modal .modalBody {
+        display: flex;
+        height: 180px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .overlay .modal .modalBody .modalBodyText {
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    .open {
+        display: flex;
     }

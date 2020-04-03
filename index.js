@@ -18,3 +18,26 @@ dropdownLI.forEach(el=>{
     })
 })
 
+//ACTIONS
+const actions = document.querySelectorAll('.action');
+const overlay= document.querySelector('.overlay');
+const closeBtn=document.querySelector('.closeModal');
+const headerText=document.querySelector('.headerText');
+const modalBodyText= document.querySelector('.modalBodyText')
+actions.forEach(action=>action.addEventListener('click',(e)=>{
+    let div=e.target.closest('div');
+    if(div.dataset.action !=="fork") return
+    let repoName=document.title.split('/')[1]
+    headerText.textContent=`fork ${repoName}`
+    modalBodyText.textContent=`Where should we fork ${repoName} ? `
+    overlay.classList.add('open')
+    document.addEventListener('click',overlayClick)
+}))
+closeBtn.onclick=e=>overlayClick(e);
+function overlayClick(e){
+let str=[...e.target.classList].join()
+if(str.includes('open')||str.includes('closeModal')){
+   overlay.classList.remove('open')
+  document.removeEventListener('click',overlayClick)
+}
+}
