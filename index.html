@@ -76,20 +76,61 @@
             <div class="actions">
                 <div class="userProject">
                     <svg class="octicon octicon-repo" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M4 9H3V8h1v1zm0-3H3v1h1V6zm0-2H3v1h1V4zm0-2H3v1h1V2zm8-1v12c0 .55-.45 1-1 1H6v2l-1.5-1.5L3 16v-2H1c-.55 0-1-.45-1-1V1c0-.55.45-1 1-1h10c.55 0 1 .45 1 1zm-1 10H1v2h2v-1h3v1h5v-2zm0-10H2v9h9V1z"></path></svg>
-                    <h2>IBanda / <span>Yummy-Blog</span></h3>
+                    <h2>IBanda / <span>Yummy-Blog</span></h2>
                 </div>
                 <div class="actionBtn">
+                    <div class="watchDropdown">
+                        <ul>
+                            <li>
+                                <p>Notifications</p>
+                            </li>
+                            <li class="watchListItem">
+                                <input type="radio" name="watchMark" id="">
+                                <div class="checkMark" data-watchstate="Watch" style="width: 13px;"></div>
+                                <div>
+                                    <p>Not watching</p>
+                                    <span>Be notified only when participating or @mentioned</span>
+                                </div>
+                            </li>
+                            <li class="watchListItem">
+                                <input type="radio" name="watchMark" id="">
+                                <div class="checkMark" data-watchstate="Unwatch releases" id="specialMark"></div>
+                                <div>
+                                    <p>Releases only</p>
+                                    <span>Be notified of new releases, and when participating or @mentioned</span>
+                                </div>
+                            </li>
+                            <li class="watchListItem">
+                                <input type="radio" checked=true name="watchMark" id="">
+                                <div class="checkMark" data-watchstate="Unwatch"></div>
+                                <div>
+                                    <p>Watching</p>
+                                    <span>Be notified of all conversations</span>
+                                </div>
+                            </li>
+                            <li class="watchListItem">
+                                <input type="radio" name="watchMark" id="">
+                                <div class="checkMark" data-watchstate="Stop ignoring"></div>
+                                <div>
+                                    <p>Ignoring</p>
+                                    <span>Never be notified</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="notifications">
                         <div>
                             <div class="action" data-action="watch">
-                                <svg class="octicon octicon-eye v-align-text-bottom" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
-                                <P>unwatch</P>
+                                <svg class="ignoreSVG" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 2.81v10.38c0 .67-.81 1-1.28.53L3 10H1c-.55 0-1-.45-1-1V7c0-.55.45-1 1-1h2l3.72-3.72C7.19 1.81 8 2.14 8 2.81zm7.53 3.22l-1.06-1.06-1.97 1.97-1.97-1.97-1.06 1.06L11.44 8 9.47 9.97l1.06 1.06 1.97-1.97 1.97 1.97 1.06-1.06L13.56 8l1.97-1.97z"></path></svg>
+                                <svg class="watchEye" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"></path></svg>
+                                <P class="watchState">Watch</P>
                                 <span class="dropPointer"></span>
+
                             </div>
 
                             <div class="counter">
                                 <a>
-                                    <p>1</p>
+                                    <p class="watchCount">0</p>
                                 </a>
                             </div>
                         </div>
@@ -100,10 +141,9 @@
                                 <svg height="16" class="octicon octicon-star v-align-text-bottom" vertical_align="text_bottom" viewBox="0 0 14 16" version="1.1" width="14" aria-hidden="true"><path fill-rule="evenodd" d="M14 6l-4.9-.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14 7 11.67 11.33 14l-.93-4.74L14 6z"></path></svg>
                                 <p>star</p>
                             </div>
-
                             <div class="counter">
                                 <a href="#">
-                                    <p>0</p>
+                                    <p class="starCounter">0</p>
                                 </a>
                             </div>
                         </div>
@@ -124,7 +164,6 @@
                 </div>
             </div>
             <div>
-
             </div>
         </div>
     </header>

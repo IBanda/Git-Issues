@@ -127,6 +127,13 @@
         left: 10px;
     }
     
+    .notifications .ignoreSVG {
+        fill: #cb2431;
+        display: none;
+    }
+    
+    .notifications .watchEye {}
+    
     .headerRight .dropPointer {
         position: absolute;
         right: -21px;
@@ -252,7 +259,8 @@
     
     .bottomHeader .userProject h2 {
         font-weight: 400;
-        color: #006eed;
+        font-size: 18px;
+        color: #0366d6;
     }
     
     .bottomHeader .userProject svg {
@@ -290,6 +298,7 @@
         align-items: center;
         padding-right: 10px;
         height: 28px;
+        position: relative;
     }
     
     .bottomHeader .action p {
@@ -300,7 +309,7 @@
         display: flex;
         align-items: center;
         position: relative;
-        text-transform: capitalize;
+        /* text-transform: capitalize; */
     }
     
     .bottomHeader .star>div {
@@ -337,6 +346,10 @@
     
     .bottomHeader .counter p {
         margin: 0;
+    }
+    
+    .bottomHeader .actions .actionBtn {
+        position: relative;
     }
     
     .bottomHeader .actions .actionBtn svg {
@@ -380,7 +393,7 @@
         border: none;
         background-color: inherit;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 15px;
     }
     
     .overlay .modal .modalBody {
@@ -398,4 +411,137 @@
     
     .open {
         display: flex;
+    }
+    
+    .watchDropdown {
+        position: absolute;
+        z-index: 100;
+        top: 35px;
+        border: 1px solid lightgray;
+        max-width: 312px;
+        border-radius: 2px;
+        line-height: 1.2;
+        background-color: #fff;
+        display: none;
+        box-shadow: 1px 0px 5px 3px rgba(44, 43, 43, 0.1);
+    }
+    
+    .toggleWatch {
+        display: block;
+    }
+    
+    .watchDropdown span {
+        font-size: 12px;
+        width: 80%;
+    }
+    
+    .watchDropdown ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .watchDropdown ul>li {
+        display: flex;
+    }
+    
+    .watchDropdown ul li p {
+        margin: 0;
+        font-weight: 600;
+    }
+    
+    .watchDropdown ul li input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    
+    .watchDropdown ul li .checkMark+div {
+        margin-left: -10px;
+    }
+    
+    .watchDropdown ul li {
+        /* margin: 10px 0; */
+        padding: 10px 25px 10px 0;
+        /* border-top: 1px solid lightgray; */
+        border-bottom: 1px solid lightgray;
+        cursor: pointer;
+    }
+    
+    .watchDropdown ul li:first-child:hover {
+        color: #000;
+    }
+    
+    .watchDropdown ul li:hover {
+        background-color: #006eed;
+        color: #fff;
+    }
+    
+    .watchDropdown ul li:hover .checkMark {
+        background-color: #fff;
+    }
+    
+    .watchDropdown ul li:hover .checkMark::after {
+        background-color: #006eed;
+    }
+    
+    .watchDropdown ul li .checkMark {
+        width: 12px;
+        height: 6px;
+        margin-right: 20px;
+        background-color: #000;
+        transform: rotate(-45deg);
+        border: transparent;
+        margin-top: 7px;
+        visibility: hidden;
+    }
+    
+    .watchDropdown ul li .showCheck {
+        visibility: visible;
+    }
+    
+    .watchDropdown ul li:first-child {
+        padding-left: 10px;
+        font-size: 12px;
+        background-color: #f6f8fa;
+    }
+    
+    .watchDropdown ul li .checkMark::after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 12px;
+        height: 6px;
+        top: -2px;
+        right: -2px;
+        border: transparent;
+    }
+    
+    .watchDropdown ul li #specialMark {
+        width: 17px;
+        height: 6px;
+        /* margin-right: 10px; */
+        background-color: #000;
+        transform: rotate(-45deg);
+        border: transparent;
+        margin-top: 7px;
+    }
+    
+    .watchDropdown ul li:hover #specialMark {
+        background-color: #fff;
+    }
+    
+    .watchDropdown ul li:hover #specialMark::after {
+        background-color: #006eed;
+    }
+    
+    .watchDropdown ul li #specialMark::after {
+        content: '';
+        position: absolute;
+        background-color: white;
+        width: 12px;
+        height: 6px;
+        top: -2px;
+        right: -2px;
+        border: transparent;
     }
