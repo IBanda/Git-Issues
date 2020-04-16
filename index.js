@@ -73,8 +73,8 @@ watchDropdown.addEventListener('click',e=>{
 
 closeBtn.onclick=e=>overlayClick(e);
 function overlayClick(e){
-let str=[...e.target.classList].join()
-if(str.includes('open')||str.includes('closeModal')){
+let classes=e.target.classList
+if(classes.contains('open')||classes.contains('closeModal')){
    overlay.classList.remove('open')
   document.removeEventListener('click',overlayClick)
 }
